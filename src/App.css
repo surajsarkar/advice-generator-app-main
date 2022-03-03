@@ -1,38 +1,106 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --dark-blue: hsl(218, 23%, 16%);
+  --dark-grayesh-blue: hsl(217, 19%, 24%);
+  --grayish-blue: hsl(217, 19%, 38%);
+
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+}
+
+body {
   text-align: center;
+  background-color: var(--dark-blue);
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h6 {
+  color: var(--neon-green);
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.parent {
+  width: 50vw;
+  padding: 10px;
+  border-radius: 16px;
+  position: relative;
+
+  background-color: var(--dark-grayesh-blue);
+
+  margin: 100px auto;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--light-cyan);
+}
+
+.parent:hover {
+  box-shadow: 0px 0px 10px 1px lightsteelblue;
+}
+
+@media screen and (max-width: 600px) {
+  .parent {
+    width: 80vw;
+  }
+  .attribution {
+    width: 90vw;
+    font-size: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  margin: 20px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.divider {
+  width: 80%;
+
+  margin: 15px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(50%);
+
+  text-align: center;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100%;
+  border: none;
+
+  background-color: var(--neon-green);
+}
+
+button:hover {
+  box-shadow: 1px 1px 30px 10px var(--neon-green);
+}
+
+button img {
+  width: 20px;
+}
+
+.attribution {
+  padding: 10px;
+  margin: 50px;
+  background-color: var(--grayish-blue);
+  border-radius: 16px;
+  display: inline;
+  height: auto;
+  color: var(--dark-blue);
+}
+
+.attribution a {
+  color: var(--neon-green);
+}
+
+.attribution a:hover {
+  color: var(--light-cyan);
 }
